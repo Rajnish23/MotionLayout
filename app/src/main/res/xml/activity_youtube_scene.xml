@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="200">
+       <KeyFrameSet>
+       </KeyFrameSet>
+
+        <OnClick motion:clickAction="toggle"
+            motion:targetId="@id/details"/>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+
+        <Constraint
+            android:id="@+id/details_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="4"
+            android:layout_weight="2"/>
+        <Constraint
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/like_ll"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/details"
+            motion:layout_constraintEnd_toStartOf="@id/dislike_ll"/>
+        <Constraint
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dislike_ll"
+            motion:layout_constraintStart_toEndOf="@id/like_ll"
+            motion:layout_constraintTop_toBottomOf="@id/details"
+            motion:layout_constraintEnd_toStartOf="@id/livechat_ll"/>
+        <Constraint
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/livechat_ll"
+            motion:layout_constraintStart_toEndOf="@id/dislike_ll"
+            motion:layout_constraintTop_toBottomOf="@id/details"
+            motion:layout_constraintEnd_toStartOf="@id/share_ll"/>
+        <Constraint
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/share_ll"
+            motion:layout_constraintStart_toEndOf="@id/livechat_ll"
+            motion:layout_constraintTop_toBottomOf="@id/details"
+            motion:layout_constraintEnd_toStartOf="@id/download_ll"/>
+        <Constraint
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/download_ll"
+            motion:layout_constraintStart_toEndOf="@id/share_ll"
+            motion:layout_constraintTop_toBottomOf="@id/details"
+            motion:layout_constraintEnd_toEndOf="parent"/>
+
+        <Constraint
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/save_ll"
+            android:visibility="gone"
+            motion:layout_constraintStart_toEndOf="@id/download_ll"
+            motion:layout_constraintTop_toBottomOf="@id/details"/>
+
+        <Constraint
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/description"
+            android:visibility="gone"
+            motion:layout_constraintStart_toEndOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/subscribe_ll"/>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/details_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="4"
+            android:layout_weight="2"/>
+        <Constraint
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/like_ll"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/details"
+            motion:layout_constraintEnd_toStartOf="@id/dislike_ll"/>
+        <Constraint
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dislike_ll"
+            motion:layout_constraintStart_toEndOf="@id/like_ll"
+            motion:layout_constraintTop_toBottomOf="@id/details"
+            motion:layout_constraintEnd_toStartOf="@id/livechat_ll"/>
+
+        <Constraint
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/livechat_ll"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toEndOf="@id/dislike_ll"
+            motion:layout_constraintTop_toBottomOf="@id/details"/>
+
+        <Constraint
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/share_ll"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/like_ll"
+            motion:layout_constraintEnd_toStartOf="@id/download_ll"/>
+        <Constraint
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/download_ll"
+            motion:layout_constraintStart_toEndOf="@id/share_ll"
+            motion:layout_constraintTop_toBottomOf="@id/dislike_ll"
+            motion:layout_constraintEnd_toStartOf="@id/save_ll"/>
+
+        <Constraint
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/save_ll"
+            android:visibility="visible"
+            motion:layout_constraintStart_toEndOf="@id/download_ll"
+            motion:layout_constraintTop_toBottomOf="@id/livechat_ll"
+            motion:layout_constraintEnd_toEndOf="parent"/>
+
+        <Constraint
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/description"
+            android:visibility="visible"
+            motion:layout_constraintStart_toEndOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/subscribe_ll"/>
+    </ConstraintSet>
+</MotionScene>

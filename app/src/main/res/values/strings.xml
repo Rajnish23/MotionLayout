@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">JetPack</string>
+    <string name="description">MotionLayout &amp; ConstraintLayout 2.0 \n\nMotionLayout is a new viewgroup in the ConstraintLayout 2.0 library, dedicated to the creation of animations and transitions. One key difference from previous approaches is that you can describe animations/transitions in easy to understand XML files\n\n.
+This talk will present MotionLayout as well as some of the related ConstraintLayout 2.0 features, highlighting new approaches and introducing several examples along with ways of solving common animation problems.
+</string>
+</resources>

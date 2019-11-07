@@ -1,0 +1,4 @@
+#Thu Nov 07 10:25:57 AST 2019
+base.0=C\:\\Users\\Rajnish\\AndroidStudioProjects\\JetPack\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
